@@ -11,7 +11,8 @@
 |**update**  |수정일시|
 |**timestamp**  |등록일시|
 
-<br>
+<br/>
+
 # View
 
 ### guest_register_view
@@ -48,7 +49,8 @@
 |**Form**처리  |**Form** 데이터 존재시, 또는 미존재시 수행할 기능을 정의|
 |**등록**처리  |1. 사용자 모델은 django의 User 모델을 사용하도록 한다.|
 
-<br>
+<br/>
+
 # Form
 
 ### GuestForm
