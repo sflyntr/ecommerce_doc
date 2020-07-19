@@ -24,6 +24,23 @@ form이 invalide이면, "/register/"로 redirect한다.
 
 ## login_page
 
+- 로그인 이후에 이동될 페이지 정보는 request 로 부터 받는다. ( get, post )  
+
+- 로그인 form 처리  
+  1. valid
+    - authenticate 함수로 form 에 들어온 정보를 인증한다.(인증정보는 user에 반환된다.)
+      1. 인증이 된다면
+        - djanog의 login 함수를 호출한따.(즉 인증된 사용자라는 뜻이다.)
+        - login 후 session 의 혹시 모를 guest_email_id 가 있다면 삭제한다.
+        - next_url로 redirect한다.(is_safe_url확인)
+        - 만약 is_safe_url이 아니라면, 로그인 했으니 root("/")로 redirect한다.
+      2. 인증이 안된 사용자라면
+        - login.html로 로그인Form과 함께 render를 다시 한다.
+
+  2. not valid
+    - login.html로 로그인Form과 함께 render를 한다.
+
+
 ## register_page
 
 등록 form 이 valid 인 경우, User를 생성한다.  
