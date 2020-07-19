@@ -60,5 +60,11 @@ form이 invalide이면, "/register/"로 redirect한다.
 
 ## register_page
 
-등록 form 이 valid 인 경우, User를 생성한다.  
-등록 form 이 invalide 인 경우, 등록 form과 함께 accounts/register.html 페이지를 render한다.  
+|기능|요약|
+|:---|:---|
+|**Form**선언  |해당 페이지에서 사용자가 입력할 **Form**을 보여주기 위함|
+|**Next**설정  |**Form**의 값을 처리한 이후 다음에 이동할 redirect url을 설정|
+|**Form**처리  |**Form** 데이터 존재시, 또는 미존재시 수행할 기능을 정의|
+|**등록**처리  |1. 사용자 모델은 django의 User 모델을 사용하도록 한다.|
+
+
