@@ -50,3 +50,38 @@
 |**등록**처리  |1. 사용자 모델은 django의 User 모델을 사용하도록 한다.|
 
 
+# Form
+
+### GuestForm
+
+> Guest를 등록하기 위한 Form 이다.
+
+|이름|요약|
+|:---|:---|
+|**email**  |게스트의 이메일정보|
+|**active**  |현재 사용 여부(active)|
+|**update**  |수정일시|
+|**timestamp**  |등록일시|
+
+### LoginForm
+
+> 사용자 로그인을 하기 위한 Form이다.
+
+|이름|요약|
+|:---|:---|
+|**username**  |사용자아이디|
+|**password**  |비밀번호|
+
+### RegisterForm
+
+> 사용자 로그인을 하기 위한 Form이다.
+
+|이름|요약|
+|:---|:---|
+|**username**  |사용자아이디|
+|**email**  |사용자의 이메일정보|
+|**password**  |비밀번호|
+|**password2**  |확인용 비밀번호|
+|---|---|---|
+|**validation**|
+|**username**|인ㄷ|
