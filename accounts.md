@@ -1,7 +1,6 @@
 # Model
 
 ### GuestEmail
-email, active, update, timestamp
 
 > GuestEmail 모델은 일반 사용자가 아닌 손님으로 체크아웃을 할때 사용하며, 이메일을 주요정보로 한다.
 
@@ -16,7 +15,7 @@ email, active, update, timestamp
 
 ### guest_register_view
 
-
+> 손님으로 등록하기 위한 view 정보이다. 손님등록할 form을 보여준다.
 
 |기능|요약|
 |:---|:---|
@@ -28,7 +27,7 @@ email, active, update, timestamp
 
 ### login_page
 
-**FORM**으로 부터의 View 페이지 처리 일반적인 사항
+> 사용자가 로그인을 하기 위한 view 이다.
 
 |기능|요약|
 |:---|:---|
@@ -40,6 +39,8 @@ email, active, update, timestamp
 
 
 ### register_page
+
+> 신규 사용자를 등록하기 위한 view이다.
 
 |기능|요약|
 |:---|:---|
