@@ -26,5 +26,5 @@ form이 invalide이면, "/register/"로 redirect한다.
 
 ## register_page
 
-등록 form 이 valid 인 경우, User를 생성한다.
-등록 fomr 이 invalide 인 경우, 등록 form과 함께 accounts/register.html 페이지를 render한다.
+등록 form 이 valid 인 경우, User를 생성한다.  
+등록 form 이 invalide 인 경우, 등록 form과 함께 accounts/register.html 페이지를 render한다.  
