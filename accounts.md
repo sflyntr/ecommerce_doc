@@ -11,6 +11,7 @@
 |**update**  |수정일시|
 |**timestamp**  |등록일시|
 
+
 # View
 
 ### guest_register_view
@@ -35,8 +36,6 @@
 |**Next**설정  |**Form**의 값을 처리한 이후 다음에 이동할 redirect url을 설정|
 |**Form**처리  |**Form** 데이터 존재시, 또는 미존재시 수행할 기능을 정의|
 |**Login**처리 |1. 임시사용자 정보 clear <br> 2. 세션에 사용자정보 담기(django는 login함수 사용)|
-
-
 
 ### register_page
 
