@@ -83,4 +83,4 @@
 |**password**  |비밀번호|
 |**password2**  |확인용 비밀번호|
 
-Form 검증|password와 password2 가 일치하는지 여부
+`Form 검증 : password와 password2 가 일치하는지 여부`
