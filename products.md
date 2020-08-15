@@ -42,6 +42,15 @@ upload_image_path(filename) -> new_file_name : 실제 사용자가 화면에서 
 >> total 과 subtotal을 변경한다.
 >> 카트가 저장되는 경우에는 저장전에(pre_save) 최총 subtotal로 total을 재계산해서 넣는다.
 
+
+## utils.py
+product 의 slug 를 만들기 위한 util 함수를 만든다.
+- random_string_generator 는 길이와 랜덤을 만들기 위한 스트링을 받아서 길이만큼 랜덤스트링을 만든다.  
+- unique_slug_generator 는 객체와 new_slug를 받는다. 
+  - new_slug가 들어오면 이것이 원래 존재하는건지 확인하고 존재하면 새로만든다.(인스턴스명-랜덤스트링4자리)
+  - new_slug각 안들어오면 instance로 부터 slugify학고 그 뒤에 랜덤스트링4자리를 붙여 만든다.
+  
+
 <br/>
 
 # View
@@ -50,8 +59,7 @@ upload_image_path(filename) -> new_file_name : 실제 사용자가 화면에서 
 
 > 카트 관련 View는 일단 장바구니 담기 하면 이동되는 페이지 그리고 이미 담겨있는게 뭔지 보는 페이지 사실 이 2개는 같은 곳을 볼것이다.
 > 그 위치에서 장바구니에 상품을 변경하면 이동되는 페이지. 이것도 같은 것일것이다.
-> 결국 View에 기능들이 있지만, 이동되는 최종 위치는 cart_home.html일것 같다.
-
+> 결국 View에 기능들이 있지만, 이동되는 최종 위치는 cart_home.html일것 
 
 |이름|요약|
 |:---|:---|
