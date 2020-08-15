@@ -33,6 +33,10 @@ model.ModelManager를 상속해야 한다.
 굳이 재정의 할 필요가 없다면 안해도 된다.    
 그리고 필요한 queyrset 함수들을 만들면 된다.   
 
+### trigger(signals)
+Product가 저장되기 전에 slug를 자동으로 만들어야 한다.  
+이벤트는 pre_save가 될것이다.
+
 ### functions  
 get_file_name(filepath) -> name, ext : 화일경로가 포함된 화일명이 들어오면 순수화일명과 확장자를 return한다.  
 upload_image_path(filename) -> new_file_name : 실제 사용자가 화면에서 이미지를 업로드하면 화일명을 중복이 나지 않게 랜덤하게 생성한다.  
@@ -49,25 +53,6 @@ product 의 slug 를 만들기 위한 util 함수를 만든다.
 - unique_slug_generator 는 객체와 new_slug를 받는다. 
   - new_slug가 들어오면 이것이 원래 존재하는건지 확인하고 존재하면 새로만든다.(인스턴스명-랜덤스트링4자리)
   - new_slug각 안들어오면 instance로 부터 slugify학고 그 뒤에 랜덤스트링4자리를 붙여 만든다.
-  
 
 <br/>
 
-# View
-
-### Carts
-
-> 카트 관련 View는 일단 장바구니 담기 하면 이동되는 페이지 그리고 이미 담겨있는게 뭔지 보는 페이지 사실 이 2개는 같은 곳을 볼것이다.
-> 그 위치에서 장바구니에 상품을 변경하면 이동되는 페이지. 이것도 같은 것일것이다.
-> 결국 View에 기능들이 있지만, 이동되는 최종 위치는 cart_home.html일것 
-
-|이름|요약|
-|:---|:---|
-|**cart_home**  |cart_home.html을 render하는 것인떼, 이 페이지에는 카트이므로 카트정보가 있어야 한다.|
-|**cart_update**  |장바구니 담기할때 cart정보가 update되어야 하는 로직이다. 즉, 상품정보가 request에 있으며, 약간 트릭인데 있으면 지우고, 없으면 넣는다. <br/> 그리고 상단에 상품갯수도 보여야한다.|
-|**checkout_home**  |checkout.html로 이동한다. 여기서 중요한 것은 checkout페이지에서 보여줄 내용은 billing_profile의 존재여부로 로그인/게스트로그인을 보여주거나 아니면 실제 페이지를 보여준다. |
-
-> 자주 사용하는 기능이 cart를 생성하는 것이니, cart_create함수를 따로 만들자.user가지고 만드는거다.
-
-
-<br/>
