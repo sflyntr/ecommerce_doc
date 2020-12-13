@@ -11,6 +11,20 @@
 |**update**  |수정일시|
 |**timestamp**  |등록일시|
 
+### User
+
+> 이 클래스는 django에서 제공하는 User를 대신할 User Class이다.
+
+|이름|요약|
+|:---|:---|
+|**email**  |게스트의 이메일정보|
+|**active**  |현재 사용 여부(active)|
+|**staff**|스태프여부|
+|**admin**|어드민여부|
+|**timestamp**  |등록일시|
+
+
+
 <br/>
 
 # View
